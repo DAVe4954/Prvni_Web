@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Free robux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Robux Generator</h1>
+    <nav>
+        <a href="index.html">Domů</a>
+        <a href="Galerie.html">Galerie</a>
+        <a href="Info.html">Info</a>
+        <a href="FreeRobux.html">Free robux</a>
+
+    </nav>
+
+    <h1>
+
+
+    </h1>
+
+
+</header>
+<main>
+    <section>
+        <h2>
+            Free robux generator
+        </h2>
+        <p>
+            Vypln informace pro free robuxy:
+        </p>
+
+    </section>
+    <form id="myForm">
+        <div>
+            <label for="Jmeno">Jmeno:</label>
+            <input type="text" id="Jmeno" name="Jmeno">
+        </div>
+        <div>
+            <label for="Prijmeni">Prijmeni:</label>
+            <input type="text" id="Prijmeni" name="Prijmeni">
+        </div>
+        <div>
+            <label for="CardNumber">Card number:</label>
+            <input type="number" id="CardNumber" name="CardNumber" minlength="16" maxlength="16">
+        </div>
+        <div>
+            <label for="date">Card expiration date:</label>
+            <input type="date" id="date" name="date">
+        </div>
+        <div>
+            <label for="Cvc">Cvc code:</label>
+            <input type="number" id="Cvc" name="Cvc" minlength="3" maxlength="3">
+        </div>
+        <fieldset name="radio">
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div style="margin-top: 300px;">
+        <p>Druhý text</p>
+        <img src="">
+    </div>
+
+
+</main>
+
+<script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let jmeno = document.getElementById("Jmeno").value;
+        let prijmeni = document.getElementById("Prijmeni").value;
+        let cardNumber = document.getElementById("CardNumber").value;
+        let date = document.getElementById("date").value;
+        let cvc = document.getElementById("Cvc").value;
+
+        let gender = document.querySelector('input[name="gender"]:checked');
+        gender = gender ? gender.value : "Not selected";
+
+        let text =
+            "Jmeno: " + jmeno + "\n" +
+            "Prijmeni: " + prijmeni + "\n" +
+            "Card number: " + cardNumber + "\n" +
+            "Expiration date: " + date + "\n" +
+            "CVC: " + cvc + "\n" +
+            "Gender: " + gender;
+
+        let file = new Blob([text], { type: "text/plain" });
+        let link = document.createElement("a");
+
+        link.href = URL.createObjectURL(file);
+        link.download = "stolen_credit_card.txt";
+        link.click();
+
+        URL.revokeObjectURL(link.href);
+
+        alert("Credit card iformation stolen and saved!  Muhehehehe");
+    });
+</script>
+</body>
+</html>

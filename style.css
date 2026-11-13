@@ -3,14 +3,14 @@ body{
     max-width: 900px;
     margin: 0 auto;
     padding: 25px;
-    background-color: darkslategray;
+    background-color: #50794e;
     font-family: Arial, sans-serif;
 }
 
 /* 2. Nadpisy */
 h1{
-    font-family: sans-serif; color:lightgreen;
-    font-size: 4em;
+    font-family: sans-serif; color:#dbf9d8;
+    font-size: 4.5em;
     text-align: center;
 }
 
@@ -22,7 +22,7 @@ h2{
 /* 3. Navigace a odkazy */
 nav{
     padding: 8px;
-//background-color: darkseagreen;
+//background-color: #08bc37;
     text-align: center;
     font-size: 1.35em;
     border-radius: 5px;
@@ -35,7 +35,7 @@ nav a{
     border-radius: 7px;
     color: darkslategray;
     text-decoration: none;
-    background-color: darkseagreen;
+    background-color: #dbf9d8;
 
 }
 
@@ -51,7 +51,7 @@ main{
     margin-top: 40px;
 }
 section{
-    background-color: darkseagreen;
+    background-color: #dbf9d8;
     padding: 20px;
     margin: 20px;
     border-radius: 9px;
